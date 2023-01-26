@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.5.4/socket.io.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.4/axios.min.js"></script>
+    <link rel="stylesheet" href="{{url_for('static', filename='room.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='loading.css')}}">
+</head>
+
+<body>
+    <div class="room-header">
+        <div><h4>ROOM NAME:</h4> <h4 id="roomName">{{hostRoom}}</h4></div>
+        <div><h4>USERNAME:</h4> <h4>{{hostPlayer}}</h4></div>
+        
+    </div>
+   
+
+    <div class="main">
+        <div class="loading-wrapper">
+            <div class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+        </div>
+        <!-- <h2 class="main-header">ITEMS MUST BE EVEN IN SIZE</h2><br> -->
+        <div class="item-container">
+            <div id="items" class="items"></div>
+            <div class="sub-container">
+                <input type="text" name="input-item" id="input-item">
+                <button onclick="set_btn()">SET ITEM</button>
+            </div>
+        </div>
+        
+        <div id="sorter" class="sorter">
+            <h1 class="sort-header"> ITEM LIST: SORT ITEM IN YOUR DESIRE ORDER <i class="fa fa-plus-square" id="toggle"></i></h1>
+            <ul>
+                <!-- <li class="item-sort" draggable="true"><span><i class="fa fa-trash"></i></span> Commit</li> -->
+            </ul>
+            <button class="srt-btn" onclick="send_btn()">SEND</button>
+        </div>
+        
+        <div class="result-container">
+            <h1>Result Using Al-Procedure</h1>
+            <div class="rsub-container">
+                <!-- <div class="result-item"></div> -->
+            </div>
+            <button onclick="returnHome()">EXIT</button>
+        </div>
+
+    </div>
+    
+    <script src="{{url_for('static', filename='app.js')}}"></script>
+    <script src="{{url_for('static', filename='draggable.js')}}"></script>
+</body>
+</html>

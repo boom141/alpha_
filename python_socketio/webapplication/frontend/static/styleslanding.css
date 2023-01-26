@@ -1,0 +1,166 @@
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background: #000;
+  color: white;
+  font-family: 'Poppins';
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.logo {
+  width: max(100px, 8vw);
+  padding: 0.8rem;
+  margin-left: 20px;
+}
+
+.navbar{
+  width: 100%;
+  padding: 25px, 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  background-color: black;
+  z-index: 1
+}
+
+
+ul{
+  margin-right: 60px;
+  width: 300px;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar ul li{
+  list-style: none;
+  display: inline-block;
+  margin: 0, 20px;
+  position: relative;
+}
+
+.navbar ul li a{
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.navbar ul li::after{
+  content: '';
+  height: 3px;
+  width: 0;
+  background: #004597;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+  width: 100%;
+}
+
+.navbar ul li a:active{
+  color: #004597;
+}
+
+#bg{
+	position: relative;
+	top: -10%;
+	width: 100vw;
+	height: 100vh;
+	z-index: -2;
+}
+
+.message{
+	position: absolute;
+	width: 40%;
+	left: 55%;
+	top: 25%;
+	text-align: center;
+}
+
+h1, h2 {	
+  margin: 0 20px;
+  font-weight: 800;
+  text-shadow: 2px 2px;
+}
+
+h2{
+  font-size: 4rem;
+  letter-spacing: 7px;
+}
+
+h1{
+  font-size: 6rem;
+  letter-spacing: 5px;
+}
+
+button{
+  width: 200px;
+  padding: 15px 0;
+  text-align: center;
+  margin: 20px 10px;
+  border-radius: 25px;
+  border: 1px solid #fff;
+  color: #fff;
+  font-weight: 650;
+  font-size: 1rem;
+  letter-spacing: 1.2px;
+  cursor: pointer;
+}
+
+#contactus{
+	background: transparent;
+}
+
+.options{
+  width:  40%;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 55%;
+  top: 65%;
+}
+
+#start{
+  background: #004597;
+}
+
+#start:hover, #contactus:hover, #start:active, #contactus:active{
+  border-color: #004597;
+}
+
+.home, .about, .help, .contact{
+  height: 100vh;
+  padding-top: 60px;
+}
+
+.about > p, .help > p, .contact > p{
+  font-size: 20px;
+  margin: 0 200px;
+  text-align: justify;
+}
+
+.about > h1, .help > h1, .contact > h1{
+  font-weight: 900px;
+  text-align: center;
+  margin: auto;
+  padding-bottom: 25px;
+  text-shadow: none;
+}

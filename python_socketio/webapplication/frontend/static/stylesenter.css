@@ -1,0 +1,198 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+
+*
+{
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+}
+
+.content{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: #000;
+	overflow: hidden;
+}
+
+body {
+  background: #000;
+  color: white;
+  font-family: 'Poppins';
+  width: 100%;
+  overflow: hidden;
+}
+
+.logo {
+  width: max(100px, 8vw);
+  padding: 0.8rem;
+  margin-left: 20px;
+}
+
+.navbar{
+  width: 100%;
+  padding: 25px, 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  background-color: black;
+  z-index: 1
+}
+
+ul{
+  width: 100px;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar ul li{
+  list-style: none;
+  display: inline-block;
+  margin: 0, 20px;
+  position: relative;
+}
+
+.navbar ul li a{
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.navbar ul li::after{
+  content: '';
+  height: 3px;
+  width: 0;
+  background: #004597;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+  width: 100%;
+}
+
+.navbar ul li a:active{
+  color: #004597;
+}
+
+.box{
+	position: relative;
+	width: 380px;
+	height: 420px;
+	background: #1c1c1c;
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+.box::before{
+	content: '';
+	position: absolute;
+	top: -50%;
+	left: -50%;
+	width: 380px;
+	height: 420px;
+	background: linear-gradient(0deg,transparent,#004597,#004597);
+	transform-origin: bottom right;
+	animation: animate 6s linear infinite;
+}
+
+.box::after{
+	content: '';
+	position: absolute;
+	top: -50%;
+	left: -50%;
+	width: 380px;
+	height: 420px;
+	background: linear-gradient(0deg,transparent,#004597,#004597);
+	transform-origin: bottom right;
+	animation: animate 6s linear infinite;
+	animation-delay: -3s;
+}
+
+@keyframes animate{
+	0%{
+		transform: rotate(0deg);
+	}
+	100%{
+		transform: rotate(360deg);
+	}
+}
+
+
+.form{
+	position: absolute;
+	justify-content: center;
+	inset: 2px;
+	border-radius: 8px;
+	background: #000;
+	z-index: 10;
+	padding: 50px 40px;
+	display: flex;
+	flex-direction: column;
+}
+
+.inputBox{
+	position: relative;
+}
+
+.form input{
+	outline: none;
+	border-style: none;
+	border-bottom: 1px solid #fff;
+	width: 90%;
+	padding: 15px;
+	background-color: transparent;
+	margin-bottom: 20px;
+	color: #fff;
+	height: 1vh;
+	text-align: center;
+	font-size: 1rem;
+}
+
+.form input[name="name"]::after{
+	content: '';
+	height: 3px;
+	width: 100%;
+	background: #fff;
+	position: absolute;
+	left: 0;
+	bottom: -5px;
+}
+
+.form input[type="submit"], .form button{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: none;
+	outline: none;
+	background: #004597;
+	color: #fff;
+	padding: 7px 25px;
+	width: 100%;
+	margin-top: 10px;
+	border-radius: 4px;
+	font-weight: 700;
+	cursor: pointer;
+	font-size: 1rem;
+}
+
+.form button{
+	background: transparent;
+	border: 1px solid #fff;
+}
+
+.form input[type="submit"]:active{
+	border: 1px solid #fff;
+}
+
+.form button:active{
+	border: 1px solid #004597;
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html lang= "en">
+	<head>
+	    <meta charset="UTF-8" />
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	    <meta name="description" content="ALpha: Fair Division using AL Protocol" />
+	    <title>ALpha</title>
+	    <link rel="stylesheet" href="{{url_for('static', filename='styleschoose.css')}}" />
+	</head>
+	<body>
+		<div class="navbar">
+	  		<a href="{{url_for('.landing')}}"><img class="logo" src="{{url_for('static', filename='images/AL_logo.png')}}" alt="ALpha logo"></a>
+	        <ul>
+	          <li><a href="{{url_for('.landing')}}" accesskey="s">HOME</a></li>
+          </ul>
+   		</div>
+   		<div class="options">
+   			<a href="{{url_for('.host')}}"><button type="submit" id="new">New Session</button></a>
+      		<a href="{{url_for('.join')}}"><button type="submit" id="join">Join Session</button></a>
+   		</div>
+   		<img id="bg" src="{{url_for('static', filename='images/chooseBG.png')}}" alt="ALpha Background">
+	</body>
+</html>
